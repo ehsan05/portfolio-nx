@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -11,46 +12,31 @@ export const TextGenerateEffect = ({
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
-  useEffect(() => {
-    console.log(wordsArray);
-    animate(
-      "span",
-      {
-        opacity: 1,
-      },
-      {
-        duration: 2,
-        delay: stagger(0.2),
-      }
-    );
-  }, [scope.current]);
+  const wordsArray = words.split(" ");
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
-                } opacity-0`}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
+  useEffect(() => {
+  
+    if (!scope.current) return;
+
+    animate("span", { opacity: 1 }, { duration: 2, delay: stagger(0.2) });
+  }, [animate, scope]); // depend on animate and scope only
 
   return (
     <div className={cn("font-bold", className)}>
-      {/* mt-4 to my-4 */}
       <div className="my-4">
-        <div className=" dark:text-white text-black leading-snug tracking-wide">
-          {renderWords()}
+        <div className="dark:text-white text-black leading-snug tracking-wide">
+          <motion.div ref={scope}>
+            {wordsArray.map((word, idx) => (
+              <motion.span
+                key={word + idx}
+                className={`opacity-0 ${
+                  idx > 3 ? "text-purple" : "dark:text-white text-black"
+                }`}
+              >
+                {word}{" "}
+              </motion.span>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>

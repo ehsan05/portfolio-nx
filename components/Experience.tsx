@@ -2,7 +2,9 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
-import Image from 'next/image'
+import Image from "next/image";
+
+
 const Experience = () => {
   return (
     <div className="py-20 w-full">
@@ -31,6 +33,8 @@ const Experience = () => {
               <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
+                width={130}
+                height={130}
                 className="lg:w-32 md:w-20 w-16"
               />
               <div className="lg:ms-5">

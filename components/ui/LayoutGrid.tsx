@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "./MovingBorders";
+import Image from "next/image";
+
 
 type Card = {
   id: number;
@@ -83,9 +84,8 @@ const BlurImage = ({ card }: { card: Card }) => {
   return (
     <Image
       src={card.thumbnail}
-      //   change image scale 500 to 100
-      height="100"
-      width="100"
+      height={100}
+      width={100}
       onLoad={() => setLoaded(true)}
       className={cn(
         "object-cover object-top absolute inset-0 h-full w-full transition duration-200",

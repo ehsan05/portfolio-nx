@@ -3,6 +3,7 @@ import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
 
+
 const Footer = () => {
   const date: string = new Date().getFullYear().toString()
   return (
@@ -13,6 +14,8 @@ const Footer = () => {
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-50 "
+          width={100}
+          height={100}
         />
       </div>
 

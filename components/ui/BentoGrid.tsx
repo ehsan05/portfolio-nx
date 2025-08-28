@@ -4,7 +4,6 @@ import Lottie from "react-lottie";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
@@ -72,12 +71,10 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-      
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
-
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -88,6 +85,8 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute">
           {img && (
             <Image
+              width={300}
+              height={300}
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover object-center ")}
@@ -95,11 +94,14 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <Image
+              width={220}
+              height={220}
               src={spareImg}
               alt={spareImg}
               //   width={220}
@@ -120,7 +122,6 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
- 
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
@@ -131,13 +132,10 @@ export const BentoGridItem = ({
             {title}
           </div>
 
- 
           {id === 2 && <GridGlobe />}
 
-    
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
- 
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
@@ -167,10 +165,10 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
-  
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 

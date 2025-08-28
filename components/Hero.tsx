@@ -8,6 +8,7 @@ import { projects } from "@/data";
 
 
 const scrollToSection = (id: string): void => {
+  if (typeof window === "undefined") return; // prevents SSR errors
   const el = document.getElementById(id);
   if (el) {
     const yOffset = -80; // navbar height

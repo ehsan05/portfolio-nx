@@ -23,6 +23,7 @@ export const gridItems = [
     img: "/b1.svg",
     spareImg: "",
   },
+  
   {
     id: 2,
     title: "Flexible across time zones.",
@@ -80,6 +81,16 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "Full-Stack Expense Tracker ",
+    des: "Full-Stack AI-Integrated Expense Tracker (Next.js)",
+    img: "/expenseTracker.png",
+    iconLists: ["/next.svg","/ts.svg", "/tail.svg", "/prisma.png"],
+    link: "https://expense-tracker-ai-liard.vercel.app/",
+    githubLink: "https://github.com/ehsan05/expense-tracker-ai",
+  },
+
+  {
+    id: 2,
     title: "Task Manager",
     des: "Organize, track, and complete your tasks with ease",
     img: "/taskManager.jpg",
@@ -88,7 +99,7 @@ export const projects = [
     githubLink: "https://github.com/ehsan05/Task-manager",
   },
   {
-    id: 2,
+    id: 3,
     title: "Tenzies Game",
     des: "Roll and holde the Dices until they are all the same number.",
     img: "/tenzies.jpg",
@@ -97,7 +108,7 @@ export const projects = [
     githubLink: "https://github.com/ehsan05/tenzies",
   },
   {
-    id: 3,
+    id: 4,
     title: "Search Pokémon app",
     des: "Find any Pokémon by name or Pokédex number.",
     img: "/pokemon.jpg",
@@ -106,7 +117,7 @@ export const projects = [
     githubLink: "https://github.com/ehsan05/pokemon-search-app",
   },
   {
-    id: 4,
+    id: 5,
     title: "Animated Apple Iphone 3D Website",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",

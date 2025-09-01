@@ -95,8 +95,8 @@ export const projects = [
     des: "Build and personalize your AI Learning Companion",
     img: "/saas.png",
     iconLists: ["/next.svg", "/ts.svg", "/tail.svg"],
-    link: "https://ehk-saas-app.vercel.app/",
-    githubLink: "https://github.com/ehsan05/ehk-saas-app",
+    link: "https://saas-app-ehk.vercel.app/",
+    githubLink: "https://github.com/ehsan05/saas-app-ehk",
   },
   {
     id: 3,

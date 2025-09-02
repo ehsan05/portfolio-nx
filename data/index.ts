@@ -84,7 +84,7 @@ export const projects = [
     title: "Full-Stack Expense Tracker ",
     des: "Full-Stack AI-Integrated Expense Tracker (Next.js)",
     img: "/expenseTracker.png",
-    iconLists: ["/next.svg","/ts.svg", "/tail.svg", "/prisma.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/tail.svg", "/prisma.png"],
     link: "https://expense-tracker-ai-liard.vercel.app/",
     githubLink: "https://github.com/ehsan05/expense-tracker-ai",
   },
@@ -127,12 +127,12 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
-    githubLink: "https://github.com/ehsan05/pokemon-search-app",
+    title: "Modern Portfolio",
+    des: "A fully functional simple portfolio page using React.js ",
+    img: "/karimi-de.png",
+    iconLists: ["/re.svg", "/css.svg", "js.svg"],
+    link: "https://karimi-de.netlify.app/",
+    githubLink: "https://github.com/ehsan05/karimi-de",
   },
 ];
 
